@@ -35,7 +35,7 @@ if (err) console.error(err);
 })
 
 })
-client.on('guildMemberRemove', (u) => {
+client.on('guildMemberRemove', (u) => { 
     u.guild.fetchAuditLogs().then( s => {
         var ss = s.entries.first();
         if (ss.action == `MEMBER_KICK`) {
